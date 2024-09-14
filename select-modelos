@@ -1,1 +1,24 @@
 
+SELECT * FROM [tabela] ORDER BY ID DESC
+
+SELECT   [campos], [campos], [campos] COUNT(*) AS QTD
+FROM     [tabela]
+GROUP BY [campos], [campos], [campos]
+ORDER BY [campos], [campos], [campos]
+
+
+SELECT   [campos], Count(*) as vQTD
+FROM     [tabela]
+Group BY [campos]
+Order BY vQTD desc
+
+SELECT Count(*) AS vQTD
+FROM ( SELECT DISTINCT [campos], FROM [tabela] )
+
+SELECT DISTINCT( [campos] ), COUNT(*) AS QTD FROM [tabela]
+
+UPDATE [tabela] SET [campos] = 1
+
+SELECT   [campos], COUNT(*) AS vQTD
+FROM     [tabela]
+GROUP BY [campos]
