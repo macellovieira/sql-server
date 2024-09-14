@@ -1,0 +1,3 @@
+SELECT * 
+FROM nome_tabela
+WHERE nome_campo IS NOT NULL
