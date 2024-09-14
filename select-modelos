@@ -1,3 +1,7 @@
+SELECT    [campos], [campos], [campos]
+FROM      [tabela]
+WHERE     ( [campos] IS NULL) OR ( [campos] = 'X')
+ORDER BY  [campos]
 
 SELECT * FROM [tabela] ORDER BY ID DESC
 
