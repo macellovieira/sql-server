@@ -1,0 +1,9 @@
+Print '======================================================================================================================='
+Print  ''
+Print  'EMPRESA'
+Print  ''
+
+       BACKUP DATABASE IMPORT   TO DISK =  'C:\Backup_Manual\BANCO DE DADOS.bak'  WITH FORMAT
+Print '======================================================================================================================='
+       BACKUP DATABASE IMPORT   TO DISK =  'D:\Backup_Manual\BANCO DE DADOS.bak'  WITH FORMAT
+
