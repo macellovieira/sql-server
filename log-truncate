@@ -1,0 +1,14 @@
+alter database TABELA set recovery simple
+GO
+
+exec sp_dboption 'TABELA', 'trunc. log on chkpt.'
+GO
+
+backup log TABELA with truncate_only
+GO
+
+DBCC SHRINKDATABASE (TABELA)
+GO
+
+alter database TABELA set recovery full
+GO
