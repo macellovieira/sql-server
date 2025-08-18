@@ -11,6 +11,8 @@ SET @antigoSchema = 'NOME SHEMA ANTIGO'
 SELECT 'ALTER SCHEMA [' + @novoSchema + '] TRANSFER [' + @antigoSchema + '].[' + NAME + ']'
 FROM SYS.OBJECTS WHERE TYPE = 'U' AND Schema_ID = (SELECT schema_id FROM sys.schemas WHERE name = @antigoSchema)
 
-LISTA ... DAS TABELAS
+LISTA ... as TABELAS
 
-Referencia: https://www.guj.com.br/t/como-definir-padrao-dbo-do-sql-server-para-outro-banco/381501
+Referencia: 
+https://www.guj.com.br/t/como-definir-padrao-dbo-do-sql-server-para-outro-banco/381501
+https://stackoverflow-com.translate.goog/questions/15482838/change-schema-name-of-table-in-sql?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc
