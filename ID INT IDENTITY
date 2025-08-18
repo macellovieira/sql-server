@@ -1,0 +1,10 @@
+ATENÇÃO COM AS TABELA - MÃE
+- CADASTRO_CLIENTES
+---------------------------
+
+-- Remover coluna antiga
+   ALTER TABLE NOME-TABELA DROP COLUMN ID;
+
+-- Adicionar nova coluna IDENTITY
+   ALTER TABLE NOME-TABELA ADD ID INT IDENTITY(1,1);
+
