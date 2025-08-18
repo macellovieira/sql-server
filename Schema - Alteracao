@@ -1,0 +1,16 @@
+MANUAL :
+ALTER SCHEMA [dbo] TRANSFER [ nome_shema_antifo ].[ nome_da_tabela ];
+
+
+GERAR LISTA : 
+DECLARE @novoSchema VARCHAR(100), @antigoSchema VARCHAR(100)
+
+SET @novoSchema   = 'dbo'
+SET @antigoSchema = 'NOME SHEMA ANTIGO'
+
+SELECT 'ALTER SCHEMA [' + @novoSchema + '] TRANSFER [' + @antigoSchema + '].[' + NAME + ']'
+FROM SYS.OBJECTS WHERE TYPE = 'U' AND Schema_ID = (SELECT schema_id FROM sys.schemas WHERE name = @antigoSchema)
+
+LISTA ... DAS TABELAS
+
+Referencia: https://www.guj.com.br/t/como-definir-padrao-dbo-do-sql-server-para-outro-banco/381501
