@@ -1,8 +1,8 @@
-SELECT name
+SELECT name FROM sys.objects WHERE type = 'U'
 
-FROM sys.objects
-
-WHERE type = 'U'
+SELECT da.name AS BANCOS, ta.name as TABELAS 
+FROM sys.schemas da join sys.tables ta on da.schema_id = ta.schema_id 
+GROUP by da.name, ta.name
 
 Type :
 ----------------------------------------------
