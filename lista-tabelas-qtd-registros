@@ -1,0 +1,13 @@
+SELECT
+    t.name AS NomeDaTabela,
+    SUM(p.rows) AS QuantidadeDeRegistros
+FROM
+    sys.tables AS t
+INNER JOIN
+    sys.partitions AS p ON t.object_id = p.object_id
+WHERE
+    t.is_ms_shipped = 0 AND p.index_id IN (0, 1)
+GROUP BY
+    t.name
+ORDER BY
+    t.name;
