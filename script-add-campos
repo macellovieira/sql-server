@@ -1,16 +1,16 @@
 
 ALTER TABLE [dbo].[CADASTRO_USUARIOS]
-ADD ENDERECO     VARCHAR(100) NULL,
-    NUMERO       VARCHAR(10)  NULL,
-    CEP          CHAR(8)      NULL,
-    UF           CHAR(2)      NULL,
-    CIDADE       VARCHAR(50)  NULL,
-    BAIRRO       VARCHAR(50)  NULL,
-    CELULAR_DDD  CHAR(2)      NULL,
-    CELULAR      VARCHAR(11)  NULL,
-    TELEFONE_DDD CHAR(2)      NULL,
-    TELEFONE     VARCHAR(10)  NULL,
-    OBSERVACAO   VARCHAR(MAX) NULL;
+ADD ENDERECO     CHAR(100) NULL,
+    NUMERO       CHAR(10)  NULL,
+    CEP          cHAR(8)   NULL,
+    UF           CHAR(2)   NULL,
+    CIDADE       CHAR(50)  NULL,
+    BAIRRO       CHAR(50)  NULL,
+    CELULAR_DDD  CHAR(2)   NULL,
+    CELULAR      CHAR(11)  NULL,
+    TELEFONE_DDD CHAR(2)   NULL,
+    TELEFONE     CHAR(10)  NULL,
+    OBSERVACAO   CHAR(MAX) NULL;
 
 ========================================================================
 
