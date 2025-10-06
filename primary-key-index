@@ -1,0 +1,31 @@
+CREATE TABLE Clientes (
+    Id INT NOT NULL PRIMARY KEY, -- índice clusterizado automático
+    Nome VARCHAR(100),
+    Email VARCHAR(100)
+);
+
+Para ver os índices de uma tabela:
+EXEC sp_helpindex 'Clientes';
+
+1. Criar índice manual em uma tabela existente
+   CREATE INDEX IDX_Clientes_Nome
+   ON Clientes (Nome);
+   ➡️ Cria um índice não clusterizado (NONCLUSTERED) sobre a coluna Nome.
+
+2. Criar índice clusterizado manualmente
+   Use somente se a tabela não tiver um índice clusterizado ainda.
+   CREATE CLUSTERED INDEX IDX_Clientes_Id
+   ON Clientes (Id);
+
+3. Criar índice não clusterizado com múltiplas colunas
+   CREATE NONCLUSTERED INDEX IDX_Clientes_Nome_Email
+   ON Clientes (Nome, Email);
+
+4. Adicionar PRIMARY KEY em tabela já existente
+   ALTER TABLE Clientes
+   ADD CONSTRAINT PK_Clientes PRIMARY KEY (Id);
+   ➡️ Isso também cria automaticamente um índice clusterizado (a menos que você especifique NONCLUSTERED).
+
+5. Criar índice único (UNIQUE) — não permite valores repetidos
+   CREATE UNIQUE INDEX IDX_Clientes_Email
+   ON Clientes (Email);
