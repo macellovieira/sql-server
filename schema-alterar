@@ -1,5 +1,0 @@
-SELECT 'ALTER SCHEMA dbo TRANSFER [' + s.name + '].[' + t.name + '];' AS ScriptTransfer
-FROM sys.tables t
-INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
-WHERE s.name <> 'dbo'
-ORDER BY s.name, t.name;
