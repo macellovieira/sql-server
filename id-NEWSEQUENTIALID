@@ -1,0 +1,15 @@
+CREATE TABLE _MyTable_Demo
+       (
+        NewIDCol    UNIQUEIDENTIFIER DEFAULT NEWID(),
+        NewSeqIDCol UNIQUEIDENTIFIER DEFAULT NEWSEQUENTIALID()
+       );
+GO
+
+INSERT INTO _MyTable_Demo ( NewIDCol, NewSeqIDCol ) VALUES (DEFAULT, DEFAULT);
+GO 100
+
+SELECT * FROM _MyTable_Demo;
+GO
+
+DROP TABLE _MyTable_Demo
+GO
