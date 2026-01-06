@@ -1,3 +1,6 @@
+
+https://blog.sqlauthority.com/2019/10/30/sql-server-using-newid-vs-newsequentialid-for-performance/
+
 CREATE TABLE _MyTable_Demo
        (
         NewIDCol    UNIQUEIDENTIFIER DEFAULT NEWID(),
